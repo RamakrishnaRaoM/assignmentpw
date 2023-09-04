@@ -1,0 +1,117 @@
+1st program
+const car = {
+  make: "TATA",
+  model: "NEXON",
+  year: 2020
+};
+function displayCarProperties(car) {
+  for (const property in car) {
+    console.log(`${property}: ${car[property]}`);
+  }
+}
+displayCarProperties(car);
+
+
+
+
+
+
+2nd program
+const student = {
+  name: "Ganesh",
+  age: 20,
+  grade: "C"
+};
+function updateGrade(newGrade) {
+  student.grade = newGrade;
+}
+
+updateGrade("B");
+console.log(student);
+
+
+
+
+
+
+
+3rd program
+function countProperties(obj) {
+  return Object.keys(obj).length;
+}
+
+const exampleObject = { a: 1, b: 2, c: 3 };
+console.log(countProperties(exampleObject));
+
+
+
+
+
+
+
+
+4th program
+function hasProperty(obj, propertyName) {
+  return obj.hasOwnProperty(propertyName).;
+}
+const exampleObject = { name: "Alice", age: 25 };
+console.log(hasProperty(exampleObject, "age")); 
+console.log(hasProperty(exampleObject, "email")); 
+
+
+
+
+
+
+
+5th program
+const radius = 5;
+const area = Math.PI * Math.pow(radius, 2);
+console.log(area);
+
+
+
+
+
+6th program
+function reverseString(input) {
+  return input.split('').reverse().join("");
+}
+const originalString = "Hello, world!";
+const reversedString = reverseString(originalString);
+console.log(reversedString);
+
+
+
+
+
+
+
+
+
+
+7th program
+const userMap = new Map();
+function addUser(name, age, email) {
+  const userInfo = { age, email };
+  userMap.set(name, userInfo);
+}
+function updateUser(name, age, email) {
+  if (userMap.has(name)) {
+    const userInfo = userMap.get(name);
+    userInfo.age = age;
+    userInfo.email = email;
+  }
+}
+function deleteUser(name) {
+  userMap.delete(name);
+}
+addUser("babar", 30, "babar@example.com");
+addUser("aniket", 25, "aniket@example.com");
+console.log(userMap);
+
+updateUser("babar", 31, "newemail@example.com");
+console.log(userMap);
+
+deleteUser("aniket");
+console.log(userMap);
